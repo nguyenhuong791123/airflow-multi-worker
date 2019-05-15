@@ -3,7 +3,7 @@
 # alias docker-purge='docker stop $(docker ps -q) && docker rmi $(docker images -q) -f'
 
 # Step 1
-git pull https://github.com/nguyenhuong791123/airflow.git
+git pull https://github.com/nguyenhuong791123/airflow-multi-worker.git
 
 # Step2
 mv /home/airflow/docker/docker /home
