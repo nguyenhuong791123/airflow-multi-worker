@@ -29,3 +29,4 @@ docker-compose -f docker-compose-worker.yml up --build -d
 docker-compose -f docker-compose-worker.yml scale af-worker=N
 
 Good Luck !!!
+
