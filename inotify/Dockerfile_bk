@@ -1,0 +1,13 @@
+FROM alpine:3.8
+MAINTAINER nhdocker "<nguyenhuong791123@gmail.com>"
+
+RUN apk --update upgrade && \
+    apk add --update inotify-tools && \
+    rm -rf /var/cache/apk/*
+
+ADD init.sh /root/init.sh
+RUN chmod 750 /root/init.sh
+
+WORKDIR /tmp
+
+CMD ["/root/init.sh"]

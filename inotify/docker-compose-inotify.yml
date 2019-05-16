@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  af-inotify:
+    image: nhdocker/inotify:v01
+    volumes:
+      - /home/dags:/home/dags
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    env_file:
+      - ec2.env
+#    environment:
+#      MONITOR_PATH: /home/dags
+#      EC2_PEM_FILE_PATH
+#      EC2_ACCOUNT_SERVER_PATH
